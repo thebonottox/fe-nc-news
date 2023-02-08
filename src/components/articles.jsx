@@ -1,31 +1,41 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
+import { getAllArticles } from "../utils/api";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("https://be-nc-news-gerson.onrender.com/api/articles")
-      .then((response) => setArticles(response.data))
+    getAllArticles()
+      .then((allArticles) => {
+        setArticles(allArticles);
+        setLoading(false);
+      })
       .catch((error) => console.error(error));
   }, []);
 
   return (
     <div>
       <h2 id="articles_list_title">Articles</h2>
-    <section className="articles_list">
-      <ul>
-        {articles.map((article) => (
-          <li key={article.article_id} id="article">
-            <h3 id="article_title">{article.title}</h3>
-            <img src={article.article_img_url} alt="article image" id="article_img" width= "250px"/>
-            <p id="article_topic">Topic: {article.topic}</p>
-            
-          </li>
-        ))}
-      </ul>
-    </section>
+      <section className="articles_list">
+        <ul>
+          {articles.map((article) => (
+            <li key={article.article_id} id="article">
+              <h3 id="article_title" >
+                <Link to={`/articles/${article.article_id}`}>{article.title}</Link>
+                </h3>
+              <img
+                src={article.article_img_url}
+                alt="article image"
+                id="article_img"
+                width="250px"
+              />
+              <p id="article_topic">Topic: {article.topic}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 };
