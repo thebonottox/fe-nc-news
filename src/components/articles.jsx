@@ -23,7 +23,7 @@ export const Articles = () => {
           {articles.map((article) => (
             <li key={article.article_id} id="article">
               <h3 id="article_title" >
-                <Link to={`/articles/${article.article_id}`}>{article.title}</Link>
+                <Link id="article_title_link" to={`/articles/${article.article_id}`}>{article.title}</Link>
                 </h3>
               <img
                 src={article.article_img_url}
