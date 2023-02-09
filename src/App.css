@@ -90,11 +90,11 @@
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    max-width: 90vw;
+    width: 90vw;
     min-height: 35vh;
-    max-height: 60vh;
+    max-height: 80vh;
     text-align: justify;
-    margin: 15px 15px 0 15px;
+    margin: 15px 20px 0 10px;
     padding: 10px 10px 0 10px;
     line-height: 12pt;
     font-size: 0.6rem;
@@ -107,10 +107,9 @@
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
     font-size: 0.5rem;
-    max-width: 90vw;
-    min-height: 30vh;
-    max-height: 50vh;
-    margin: 15px 15px 0 15px;
+    width: 90vw;
+    max-height: 60vh;
+    margin: 15px 20px 0 10px;
     padding: 10px;
     border-radius: 4px;
     overflow: auto;
@@ -138,6 +137,38 @@
 
   ul {
     list-style-type: none;
+  }
+
+  .vote_buttons {
+    background-color: rgba(215, 215, 215, 0.459);
+    width: 90vw;
+    text-align: center;
+    padding: 2px;
+    float: right;
+    border-radius: 4px;
+    margin: 0 2.5% 20px 1%;
+  }
+
+  #vote_btn {
+    background-color: rgb(178, 188, 196);
+    width: 30px;
+    height: 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+    color: rgb(37, 36, 36);
+    font-size: 0.5rem;
+  }
+
+  #vote_box_title {
+    color: rgb(71, 70, 70);
+    font-size: 0.6rem;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  #vote_number {
+    font-size: 0.5rem;
   }
 } /*END OF CELLPHONE CSS*/
 
@@ -226,7 +257,7 @@
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    max-width: 90vw;
+    width: 93.5vw;
     min-height: 35vh;
     max-height: 60vh;
     text-align: justify;
@@ -243,9 +274,8 @@
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
     font-size: 0.7rem;
-    max-width: 90vw;
-    min-height: 30vh;
-    max-height: 50vh;
+    width: 93.5vw;
+    height: 45vh;
     margin: 15px 15px 5px 15px;
     padding: 10px;
     border-radius: 4px;
@@ -275,6 +305,38 @@
 
   ul {
     list-style-type: none;
+  }
+
+  .vote_buttons {
+    background-color: rgba(215, 215, 215, 0.459);
+    width: 320px;
+    text-align: center;
+    padding: 2px;
+    float: right;
+    border-radius: 4px;
+    margin: 0 15px 20px 0;
+  }
+
+  #vote_btn {
+    background-color: rgb(178, 188, 196);
+    width: 30px;
+    height: 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+    color: rgb(37, 36, 36);
+    font-size: 0.5rem;
+  }
+
+  #vote_box_title {
+    color: rgb(71, 70, 70);
+    font-size: 0.6rem;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  #vote_number {
+    font-size: 0.5rem;
   }
 } /*END OF TABLET CSS*/
 
@@ -326,6 +388,7 @@
   #article_title {
     margin: 20px;
     padding: 5px;
+    font-size: 1.5rem;
   }
 
   #article_title_link {
@@ -348,7 +411,7 @@
   #single_art_title {
     padding: 10px 5px;
     font-size: 2.2rem;
-    max-width: 60vw;
+    max-width: 65vw;
     text-align: left;
   }
 
@@ -372,17 +435,16 @@
     max-height: 30vh;
     float: right;
     opacity: 0.7;
-    margin-right: 20px;
     margin: 10px 15px 25px 15px;
     border-radius: 4px;
   }
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    min-width: 50vw;
+    min-width: 60vw;
     max-width: 60vw;
-    min-height: 35vh;
-    max-height: 55vh;
+    min-height: 45vh;
+    max-height: 45vh;
     text-align: justify;
     margin: 10px;
     padding: 5px 10px;
@@ -397,10 +459,10 @@
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
     font-size: 0.9rem;
-    max-width: 95vw;
+    width: 98%;
     min-height: 30vh;
-    max-height: 50vh;
-    margin: 15px 15px 5px 10px;
+    max-height: 40vh;
+    margin: 25px 15px 5px 10px;
     padding: 10px;
     border-radius: 4px;
     overflow: auto;
@@ -429,5 +491,40 @@
 
   ul {
     list-style-type: none;
+  }
+
+  .vote_buttons {
+    background-color: rgba(215, 215, 215, 0.459);
+    width: 320px;
+    text-align: center;
+    padding: 15px;
+    float: right;
+    margin: 0 0 30px 15px;
+    position: absolute;
+    bottom: 4%;
+    left: 64%;
+    border-radius: 4px;
+  }
+
+  #vote_btn {
+    background-color: rgb(178, 188, 196);
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+    color: rgb(37, 36, 36);
+  }
+
+  #vote_box_title {
+    padding-bottom: 5px;
+    color: rgb(71, 70, 70);
+  }
+
+  .loading {
+    font-size: 2rem;
+    margin: 100px;
+    text-align: center;
+    color: rgb(4, 4, 4);
   }
 } /*END OF LAPTOP CSS*/
