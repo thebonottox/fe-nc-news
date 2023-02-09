@@ -7,18 +7,16 @@
 @media only screen and (max-width: 767px) {
   .header_title {
     text-align: center;
-    margin: 30px 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    margin: 10px 0;
     padding: 10px;
+    background-color: rgba(215, 215, 215, 0.459);
   }
 
   .nav_bar {
     text-align: center;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.937);
-    color: rgba(255, 255, 255, 0.972);
-    margin: 20px 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.765);
+    color: rgb(255, 255, 255);
     padding: 09px;
   }
 
@@ -26,22 +24,16 @@
     color: rgb(229, 230, 231);
   }
 
-  ul.no-bullets {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-  }
-
   #articles_list_title {
     text-align: center;
-    margin: 20px;
+    margin: 10px;
     padding: 5px;
   }
 
   #article {
     text-align: center;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.462);
-    margin: 20px 0;
+    border-top: 0.5px solid rgba(84, 83, 83, 0.462);
+    margin: 15px 0;
     padding: 5px;
   }
 
@@ -50,27 +42,46 @@
     padding: 5px;
   }
 
+  #article_title_link {
+    color: black;
+  }
+
   #article_topic {
     margin-top: 10px;
     padding-top: 5px;
+    font-size: 0.5rem;
   }
 
   .single_article {
-    border-top: 0.5px solid rgba(0, 0, 0, 0.462);
-    margin: 20px 0;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     height: 100vh;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(255, 255, 255);
     overflow: auto;
   }
 
   #single_art_title {
-    margin: 15px;
+    margin: 10px;
     padding: 10px;
     font-size: 1rem;
     max-width: 90vw;
     text-align: center;
+  }
+
+  .date_and_author p {
+    display: inline-block;
+    font-size: 0.4rem;
+    margin: 0 0 10px 0;
+    font-style: italic;
+  }
+
+  #created_at {
+    margin-left: 1rem;
+  }
+
+  #single_art_author {
+    display: inline-block;
+    margin-left: 0.5rem;
   }
 
   #single_art_img {
@@ -83,8 +94,8 @@
     min-height: 35vh;
     max-height: 60vh;
     text-align: justify;
-    margin: 15px;
-    padding: 10px;
+    margin: 15px 15px 0 15px;
+    padding: 10px 10px 0 10px;
     line-height: 12pt;
     font-size: 0.6rem;
     overflow: auto;
@@ -92,43 +103,63 @@
     border-radius: 4px;
   }
 
-  #comments {
+  .comments {
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
+    font-size: 0.5rem;
     max-width: 90vw;
     min-height: 30vh;
-    max-height: 35vh;
+    max-height: 50vh;
     margin: 15px 15px 0 15px;
     padding: 10px;
     border-radius: 4px;
+    overflow: auto;
+  }
+
+  #comment {
+    padding: 4px;
+    border-top: 1px solid rgba(215, 215, 215, 0.961);
+    text-align: justify;
+  }
+
+  .comment_info h6 {
+    display: inline-block;
+    padding: 2px;
+  }
+
+  #comment_section_title {
+    padding-bottom: 5px;
+    font-size: 0.5rem;
+  }
+
+  #comment_date {
+    display: inline-block;
+  }
+
+  ul {
+    list-style-type: none;
   }
 } /*END OF CELLPHONE CSS*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header_title {
     text-align: center;
-    margin: 30px 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: rgba(215, 215, 215, 0.459);
   }
 
   .nav_bar {
     text-align: center;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.937);
-    color: rgba(255, 255, 255, 0.972);
-    margin: 20px 0;
-    padding: 09px;
-  }
-  .nav_link {
-    color: rgb(229, 230, 231);
+    border: none;
+    background-color: rgba(0, 0, 0, 0.765);
+    color: rgb(255, 255, 255);
+    padding: 15px;
   }
 
-  ul.no-bullets {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+  .nav_link {
+    color: rgb(229, 230, 231);
+    font-size: 1.5rem;
   }
 
   #articles_list_title {
@@ -149,15 +180,17 @@
     padding: 5px;
   }
 
+  #article_title_link {
+    color: black;
+  }
+
   #article_topic {
     margin-top: 10px;
     padding-top: 5px;
   }
 
   .single_article {
-    border-top: 0.5px solid rgba(0, 0, 0, 0.462);
-    margin: 20px 0;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     height: 100vh;
     background-color: rgb(252, 252, 252);
@@ -167,9 +200,24 @@
   #single_art_title {
     margin: 15px;
     padding: 10px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     max-width: 90vw;
     text-align: center;
+  }
+
+  .date_and_author p {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-style: italic;
+  }
+
+  #created_at {
+    margin-left: 1rem;
+  }
+
+  #single_art_author {
+    display: inline-block;
+    margin-left: 0.5rem;
   }
 
   #single_art_img {
@@ -182,7 +230,7 @@
     min-height: 35vh;
     max-height: 60vh;
     text-align: justify;
-    margin: 15px;
+    margin: 15px 15px 0 15px;
     padding: 10px;
     line-height: 18pt;
     font-size: 0.8rem;
@@ -191,48 +239,69 @@
     border-radius: 4px;
   }
 
-  #comments {
+  .comments {
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
-    width: 90vw;
+    font-size: 0.7rem;
+    max-width: 90vw;
     min-height: 30vh;
-    max-height: 35vh;
-    margin: 10px 20px 20px 0;
+    max-height: 50vh;
+    margin: 15px 15px 5px 15px;
     padding: 10px;
-    float: right;
-    position: relative;
     border-radius: 4px;
+    overflow: auto;
+  }
+
+  #comment {
+    padding: 4px;
+    border-top: 1px solid rgba(215, 215, 215, 0.961);
+    text-align: justify;
+  }
+
+  .comment_info h6 {
+    display: inline-block;
+    padding: 3px;
+    font-size: 0.5rem;
+  }
+
+  #comment_section_title {
+    padding-bottom: 5px;
+    font-size: 0.7rem;
+  }
+
+  #comment_date {
+    display: inline-block;
+  }
+
+  ul {
+    list-style-type: none;
   }
 } /*END OF TABLET CSS*/
 
 @media only screen and (min-width: 992px) {
   .header_title {
     text-align: center;
-    margin: 30px 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 10px;
-    font-size: 4rem;
+    margin: 10px 0;
+    padding: 25px;
+    background-color: rgba(215, 215, 215, 0.459);
+    font-size: 3.5rem;
   }
 
   .nav_bar {
     text-align: center;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.937);
-    color: rgba(255, 255, 255, 0.972);
-    margin: 20px 0;
-    padding: 15px;
-    font-size: 2rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.765);
+    color: rgb(255, 255, 255);
+    padding: 20px;
   }
 
   .nav_link {
     color: rgb(229, 230, 231);
+    font-size: 2rem;
   }
 
   .articles_list {
-    margin-top: 40px;
     display: grid;
-
     width: 100%;
     align-items: center;
   }
@@ -240,10 +309,10 @@
   #articles_list_title {
     text-align: center;
     margin-top: 30px;
-    padding: 15px;
-    height: 100px;
+    padding: 5px;
+    height: 60px;
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   #article {
@@ -259,46 +328,64 @@
     padding: 5px;
   }
 
+  #article_title_link {
+    color: black;
+  }
+
   #article_topic {
     margin-top: 10px;
     padding-top: 5px;
   }
 
   .single_article {
-    border-top: 0.5px solid rgba(0, 0, 0, 0.462);
-    margin: 50px 0;
-    padding: 50px;
+    margin: 5px 0;
+    padding: 20px;
     width: 100%;
-    height: 100vh;
-    background-color: rgb(252, 252, 252);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
   }
 
   #single_art_title {
-    margin: 25px 5px;
     padding: 10px 5px;
     font-size: 2.2rem;
-    width: 55vw;
+    max-width: 60vw;
     text-align: left;
   }
 
+  .date_and_author p {
+    display: inline-block;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  #created_at {
+    margin-left: 1rem;
+  }
+
+  #single_art_author {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+
   #single_art_img {
-    width: 31vw;
-    height: 30vh;
+    max-width: 31vw;
+    max-height: 30vh;
     float: right;
     opacity: 0.7;
     margin-right: 20px;
-    margin-bottom: 25px;
+    margin: 10px 15px 25px 15px;
     border-radius: 4px;
   }
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    max-width: 55vw;
-    min-height: 30vh;
-    max-height: 45vh;
+    min-width: 50vw;
+    max-width: 60vw;
+    min-height: 35vh;
+    max-height: 55vh;
     text-align: justify;
     margin: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     line-height: 24pt;
     font-size: 1.3rem;
     overflow: auto;
@@ -306,14 +393,41 @@
     border-radius: 4px;
   }
 
-  #comments {
+  .comments {
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
-    width: 91vw;
+    font-size: 0.9rem;
+    max-width: 95vw;
     min-height: 30vh;
-    max-height: 35vh;
-    margin: 50px 0 0 10px;
+    max-height: 50vh;
+    margin: 15px 15px 5px 10px;
     padding: 10px;
     border-radius: 4px;
+    overflow: auto;
+  }
+
+  #comment {
+    padding: 5px;
+    border-top: 1px solid rgba(215, 215, 215, 0.961);
+    text-align: justify;
+  }
+
+  .comment_info h6 {
+    display: inline-block;
+    padding: 3px;
+    font-size: 0.8rem;
+  }
+
+  #comment_section_title {
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  #comment_date {
+    display: inline-block;
+  }
+
+  ul {
+    list-style-type: none;
   }
 } /*END OF LAPTOP CSS*/

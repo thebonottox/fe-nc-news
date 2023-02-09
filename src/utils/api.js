@@ -15,3 +15,11 @@ export const getArticleByID = (article_id) => {
     return data;
   });
 };
+
+export const getCommentsByArticleID = (article_id) => {
+  return articlesAPI
+    .get(`/articles/${article_id}/comments`)
+    .then(({ data }) => {
+      return data;
+    });
+};
