@@ -15,6 +15,14 @@ export const Articles = () => {
       .catch((error) => console.error(error));
   }, []);
 
+  if (loading) {
+    return (
+      <section className="loading">
+        <p>Loading...</p>
+      </section>
+    );
+  }
+
   return (
     <div>
       <h2 id="articles_list_title">Articles</h2>
@@ -22,9 +30,14 @@ export const Articles = () => {
         <ul>
           {articles.map((article) => (
             <li key={article.article_id} id="article">
-              <h3 id="article_title" >
-                <Link id="article_title_link" to={`/articles/${article.article_id}`}>{article.title}</Link>
-                </h3>
+              <h3 id="article_title">
+                <Link
+                  id="article_title_link"
+                  to={`/articles/${article.article_id}`}
+                >
+                  {article.title}
+                </Link>
+              </h3>
               <img
                 src={article.article_img_url}
                 alt="article image"

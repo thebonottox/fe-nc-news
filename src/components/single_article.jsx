@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArticleByID } from "../utils/api";
 import { Comments } from "./comments";
 import { getCommentsByArticleID } from "../utils/api";
+import { Votes } from "./votes";
 
 export const SingleArticle = () => {
   const { article_id } = useParams();
@@ -10,6 +11,7 @@ export const SingleArticle = () => {
   const [comments, setComments] = useState([]);
   const [formattedDate, setFormattedDate] = useState("");
   const [commentFormattedDates, setCommentFormattedDates] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     Promise.all([
@@ -19,6 +21,7 @@ export const SingleArticle = () => {
       .then(([articlesFromAPI, commentsFromAPI]) => {
         setArticle(articlesFromAPI.article);
         setComments(commentsFromAPI);
+        setLoading(false);
 
         const date = new Date(articlesFromAPI.article.created_at);
         const options = {
@@ -38,6 +41,14 @@ export const SingleArticle = () => {
       .catch((error) => console.error(error));
   }, [article_id]);
 
+  if (loading) {
+    return (
+      <section className="loading">
+        <p>Loading...</p>
+      </section>
+    );
+  }
+
   return (
     <section className="single_article">
       <h2 id="single_art_title">{article.title}</h2>
@@ -50,9 +61,10 @@ export const SingleArticle = () => {
 
       <p id="single_art_body">{article.body}</p>
       <div className="date_and_author">
-        <p id="created_at">Published on: {formattedDate}</p>
+        <p id="created_at">Published on {formattedDate}</p>
         <p id="single_art_author">by {article.author}</p>
       </div>
+      <Votes votes={article.votes} article_id={article_id} />
       <Comments
         comments={comments}
         commentFormattedDates={commentFormattedDates}
