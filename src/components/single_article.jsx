@@ -4,6 +4,7 @@ import { getArticleByID } from "../utils/api";
 import { Comments } from "./comments";
 import { getCommentsByArticleID } from "../utils/api";
 import { Votes } from "./votes";
+import { AddComment } from "./commentAdder";
 
 export const SingleArticle = () => {
   const { article_id } = useParams();
@@ -69,6 +70,7 @@ export const SingleArticle = () => {
         comments={comments}
         commentFormattedDates={commentFormattedDates}
       />
+      <AddComment comments={comments} setComments={setComments} />
     </section>
   );
 };
