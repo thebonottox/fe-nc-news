@@ -10,7 +10,7 @@ export const Comments = ({ comments, commentFormattedDates }) => {
         {comments && commentFormattedDates ? (
           <ul>
             {comments.map((comment, index) => (
-              <li key={comment.comment_id} id="comment">
+              <li key={index} id="comment">
                 <p>{comment.body}</p>
                 <div className="comment_info">
                   <h6 id="comment_author">Posted by {comment.author}</h6>

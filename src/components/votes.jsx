@@ -3,7 +3,6 @@ import { patchArticleById } from "../utils/api";
 
 export const Votes = ({ votes, article_id }) => {
   const [voteChange, setVoteChange] = useState(0);
-  console.log(votes);
 
   //Helper Functions for the buttons:
   const upVote = () => {
