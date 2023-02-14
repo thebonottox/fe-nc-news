@@ -5,7 +5,7 @@ const articlesAPI = axios.create({
 });
 
 export const getAllArticles = () => {
-  return articlesAPI.get(`/articles`).then(({ data }) => {
+  return articlesAPI.get("/articles").then(({ data }) => {
     return data;
   });
 };
@@ -34,16 +34,21 @@ export const patchArticleById = (article_id, inc_votes) => {
 };
 
 export const postNewComment = (username, newComment, article_id) => {
-  // console.log(`Article ID: ${article_id}`);
-  // console.log(`New Comment: ${newComment}`);
   const postBody = {
     body: newComment,
     username: username,
   };
-  console.log("Post Body:", JSON.stringify(postBody, null, 2));
+
   return articlesAPI
     .post(`/articles/${article_id}/comments`, postBody)
     .then(({ data }) => {
       return data;
     });
+};
+
+export const getArticlesByTopic = (topic) => {
+  return articlesAPI.get(`/articles/?topic=${topic}`).then(({ data }) => {
+    console.log(data);
+    return data;
+  });
 };
