@@ -22,6 +22,8 @@
 
   .nav_link {
     color: rgb(229, 230, 231);
+    padding: 5px;
+    margin: 0 7px;
   }
 
   #articles_list_title {
@@ -264,6 +266,8 @@
   .nav_link {
     color: rgb(229, 230, 231);
     font-size: 1.5rem;
+    padding: 5px;
+    margin: 0 10px;
   }
 
   #articles_list_title {
@@ -507,6 +511,8 @@
   .nav_link {
     color: rgb(229, 230, 231);
     font-size: 2rem;
+    padding: 5px;
+    margin: 0 15px;
   }
 
   .articles_list {

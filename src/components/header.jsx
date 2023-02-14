@@ -1,3 +1,3 @@
 export const Header = () => {
-  return <h1 className="header_title">The Gerson Times</h1>;
+  return <h1 className="header_title">NC News</h1>;
 };
