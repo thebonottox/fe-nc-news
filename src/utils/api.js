@@ -4,10 +4,17 @@ const articlesAPI = axios.create({
   baseURL: "https://be-nc-news-gerson.onrender.com/api",
 });
 
-export const getAllArticles = () => {
-  return articlesAPI.get("/articles").then(({ data }) => {
-    return data;
-  });
+export const getAllArticles = (sortBy) => {
+  return articlesAPI
+    .get("/articles", {
+      params: {
+        sort_by: sortBy,
+        order: "desc",
+      },
+    })
+    .then(({ data }) => {
+      return data;
+    });
 };
 
 export const getArticleByID = (article_id) => {
@@ -48,7 +55,6 @@ export const postNewComment = (username, newComment, article_id) => {
 
 export const getArticlesByTopic = (topic) => {
   return articlesAPI.get(`/articles/?topic=${topic}`).then(({ data }) => {
-    console.log(data);
     return data;
   });
 };

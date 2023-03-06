@@ -1,29 +1,24 @@
-import React from "react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { getArticlesByTopic } from "../utils/api";
 import { Link } from "react-router-dom";
 
-const ArticlesList = ({ articles, sortBy, setSortBy }) => {
-  const handleSelection = (event) => {
-    setSortBy(event.target.value);
-  };
+export const Topics = ({ topic, sortBy, setSortBy }) => {
+  const [articlesByTopic, setArticlesByTopic] = useState([]);
+
+  useEffect(() => {
+    getArticlesByTopic(topic)
+      .then((data) => {
+        setArticlesByTopic(data);
+      })
+      .catch((error) => console.error(error));
+  }, [topic]);
 
   return (
     <>
-      <>
-        <section>
-          <p>Sort By</p>
-          <select value={sortBy} onChange={handleSelection}>
-            <option value={"author"}>Author</option>
-            <option value={"comment_count"}>Comment Count</option>
-            <option value={"created_at"}>Most Recent</option>
-            <option value={"title"}>Title</option>
-            <option value={"topic"}>Topic</option>
-            <option value={"votes"}>Votes</option>
-          </select>
-        </section>
-      </>
       <section className="articles_list">
         <ul>
-          {articles.map((article) => {
+          {articlesByTopic.map((article) => {
             let date = new Date(article.created_at);
             return (
               <li key={article.article_id} id="article">
@@ -37,7 +32,7 @@ const ArticlesList = ({ articles, sortBy, setSortBy }) => {
                 </h3>
                 <img
                   src={article.article_img_url}
-                  alt="article image"
+                  alt=""
                   id="article_img"
                   width="250px"
                 />
@@ -55,5 +50,3 @@ const ArticlesList = ({ articles, sortBy, setSortBy }) => {
     </>
   );
 };
-
-export default ArticlesList;
