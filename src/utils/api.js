@@ -14,13 +14,21 @@ export const getAllArticles = (sortBy, order) => {
     })
     .then(({ data }) => {
       return data;
+    })
+    .catch((error) => {
+      console.log(error.response.data);
     });
 };
 
 export const getArticleByID = (article_id) => {
-  return articlesAPI.get(`/articles/${article_id}`).then(({ data }) => {
-    return data;
-  });
+  return articlesAPI
+    .get(`/articles/${article_id}`)
+    .then(({ data }) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+    });
 };
 
 export const getCommentsByArticleID = (article_id) => {
@@ -28,6 +36,9 @@ export const getCommentsByArticleID = (article_id) => {
     .get(`/articles/${article_id}/comments`)
     .then(({ data }) => {
       return data;
+    })
+    .catch((error) => {
+      console.log(error.response.data);
     });
 };
 
@@ -37,7 +48,10 @@ export const patchArticleById = (article_id, inc_votes) => {
   };
   return articlesAPI
     .patch(`/articles/${article_id}`, patchBody)
-    .then(({ data }) => [console.log(data)]);
+    .then(({ data }) => [console.log(data)])
+    .catch((error) => {
+      console.log(error.response.data);
+    });
 };
 
 export const postNewComment = (username, newComment, article_id) => {
@@ -50,18 +64,30 @@ export const postNewComment = (username, newComment, article_id) => {
     .post(`/articles/${article_id}/comments`, postBody)
     .then(({ data }) => {
       return data;
+    })
+    .catch((error) => {
+      console.log(error.response.data);
     });
 };
 
 export const getArticlesByTopic = (topic) => {
-  return articlesAPI.get(`/articles/?topic=${topic}`).then(({ data }) => {
-    return data;
-  });
+  return articlesAPI
+    .get(`/articles/?topic=${topic}`)
+    .then(({ data }) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+    });
 };
 
 export const deleteComment = (comment_id) => {
-  console.log(comment_id);
-  return articlesAPI.delete(`/comments/${comment_id}`).then(({ data }) => {
-    return data;
-  });
+  return articlesAPI
+    .delete(`/comments/${comment_id}`)
+    .then(({ data }) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+    });
 };
