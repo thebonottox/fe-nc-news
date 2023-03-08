@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleByID, getArticlesByTopic } from "../utils/api";
+import { getArticleByID } from "../utils/api";
 import { Comments } from "./comments";
 import { getCommentsByArticleID } from "../utils/api";
 import { Votes } from "./votes";
 import { AddComment } from "./commentAdder";
 
 export const SingleArticle = () => {
-  const { article_id, article2_id } = useParams();
+  const { article_id } = useParams();
   const [article, setArticle] = useState({});
   const [comments, setComments] = useState([]);
   const [formattedDate, setFormattedDate] = useState("");
