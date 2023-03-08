@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { getCommentsByArticleID } from "../utils/api";
 import { deleteComment } from "../utils/api";
 
 export const Comments = ({ comments, setComments, commentFormattedDates }) => {
-  // let id = 1301;
   const handleDelete = (comment_id) => {
-    deleteComment(comment_id).then(() => {
-      setComments(
-        comments.filter((comment) => {
-          return comment.comment_id !== comment_id;
-        })
-      );
-    });
+    deleteComment(comment_id)
+      .then(() => {
+        setComments(
+          comments.filter((comment) => {
+            return comment.comment_id !== comment_id;
+          })
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
