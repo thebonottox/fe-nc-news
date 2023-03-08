@@ -12,11 +12,11 @@ function App() {
       <Header />
       <NavBar />
       <Routes>
-        <Route path="/" element={<Articles />} />
         <Route path="/articles/:article_id" element={<SingleArticle />} />
         <Route path="/coding" element={<Topics />} />
         <Route path="/cooking" element={<Topics />} />
         <Route path="/football" element={<Topics />} />
+        <Route path="/" element={<Articles />} />
       </Routes>
     </div>
   );

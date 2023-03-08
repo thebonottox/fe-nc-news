@@ -6,16 +6,16 @@ export const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState("title");
+  const [order, setOrder] = useState("asc");
 
   useEffect(() => {
-    getAllArticles(sortBy)
+    getAllArticles(sortBy, order)
       .then((Articles) => {
         setArticles(Articles);
         setLoading(false);
       })
       .catch((error) => console.error(error));
-  }, [sortBy]);
- 
+  }, [sortBy, order]);
 
   if (loading) {
     return (
@@ -28,7 +28,13 @@ export const Articles = () => {
   return (
     <div>
       <h2 id="articles_list_title">Articles</h2>
-      <ArticlesList articles={articles} sortBy={sortBy} setSortBy={setSortBy}/>
+      <ArticlesList
+        articles={articles}
+        sortBy={sortBy}
+        setSortBy={setSortBy}
+        order={order}
+        setOrder={setOrder}
+      />
     </div>
   );
 };

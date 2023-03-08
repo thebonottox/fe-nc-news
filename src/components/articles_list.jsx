@@ -1,26 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ArticlesList = ({ articles, sortBy, setSortBy }) => {
+const ArticlesList = ({ articles, sortBy, setSortBy, order, setOrder }) => {
   const handleSelection = (event) => {
     setSortBy(event.target.value);
   };
 
+  const handleOrder = (event) => {
+    setOrder(event.target.value);
+  };
+
   return (
     <>
-      <>
-        <section>
-          <p>Sort By</p>
-          <select value={sortBy} onChange={handleSelection}>
+      <div className="sort_order">
+        <section className="sort_section">
+          <p className="sort_title">Sort By:</p>
+          <select
+            className="sort_select"
+            value={sortBy}
+            onChange={handleSelection}
+          >
             <option value={"author"}>Author</option>
             <option value={"comment_count"}>Comment Count</option>
-            <option value={"created_at"}>Most Recent</option>
+            <option value={"created_at"}>Date</option>
             <option value={"title"}>Title</option>
             <option value={"topic"}>Topic</option>
             <option value={"votes"}>Votes</option>
           </select>
         </section>
-      </>
+        <section className="order_section">
+          <p className="order_title">Order by:</p>
+          <select className="order_select" value={order} onChange={handleOrder}>
+            <option value={"asc"}>A-Z</option>
+            <option value={"desc"}>Z-A</option>
+          </select>
+        </section>
+      </div>
       <section className="articles_list">
         <ul>
           {articles.map((article) => {
@@ -41,12 +56,14 @@ const ArticlesList = ({ articles, sortBy, setSortBy }) => {
                   id="article_img"
                   width="250px"
                 />
-                <p>
-                  Written by: {article.author} on {date.toLocaleString()}
-                </p>
-                <p id="article_topic">Topic: {article.topic}</p>
-                <p>Comments: {article.comment_count}</p>
-                <p>Votes: {article.votes}</p>
+                <div className="article_list_info">
+                  <p id="article_writtenBy">
+                    Written by: {article.author} on {date.toLocaleString()}
+                  </p>
+                  <p id="article_topic">Topic: {article.topic}</p>
+                  <p id="article_comments">Comments: {article.comment_count}</p>
+                  <p id="article_votes">Votes: {article.votes}</p>
+                </div>
               </li>
             );
           })}

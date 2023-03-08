@@ -1,9 +1,8 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getArticlesByTopic } from "../utils/api";
 import { Link } from "react-router-dom";
 
-export const Topics = ({ topic, sortBy, setSortBy }) => {
+export const Topics = ({ topic }) => {
   const [articlesByTopic, setArticlesByTopic] = useState([]);
 
   useEffect(() => {
@@ -26,6 +25,7 @@ export const Topics = ({ topic, sortBy, setSortBy }) => {
                   <Link
                     id="article_title_link"
                     to={`/articles/${article.article_id}`}
+                    reloadDocument
                   >
                     {article.title}
                   </Link>
@@ -33,15 +33,19 @@ export const Topics = ({ topic, sortBy, setSortBy }) => {
                 <img
                   src={article.article_img_url}
                   alt=""
-                  id="article_img"
+                  id="articleByTopic_img"
                   width="250px"
                 />
-                <p>
-                  Written by: {article.author} on {date.toLocaleString()}
-                </p>
-                <p id="article_topic">Topic: {article.topic}</p>
-                <p>Comments: {article.comment_count}</p>
-                <p>Votes: {article.votes}</p>
+                <div className="articleByTopic_div">
+                  <p className="articlebyTopic_writtenBy">
+                    Written by: {article.author} on {date.toLocaleString()}
+                  </p>
+                  <p className="articleByTopic_topic">Topic: {article.topic}</p>
+                  <p className="articleByTopic_comments">
+                    Comments: {article.comment_count}
+                  </p>
+                  <p className="articleByTopic_votes">Votes: {article.votes}</p>
+                </div>
               </li>
             );
           })}

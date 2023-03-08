@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Topics } from "./ArticlesByTopic";
 
@@ -8,30 +8,30 @@ export const NavBar = () => {
   return (
     <div>
       <nav className="nav_bar">
-        <Link className="nav_link" to="/" onClick={() => setTopic("")}>
+        <NavLink className="nav_link" to="/" onClick={() => setTopic("")}>
           Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           className="nav_link"
           to="/coding"
           onClick={() => setTopic("coding")}
         >
           Coding
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           className="nav_link"
           to="/cooking"
           onClick={() => setTopic("cooking")}
         >
           Cooking
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           className="nav_link"
           to="/football"
           onClick={() => setTopic("football")}
         >
           Football
-        </Link>
+        </NavLink>
       </nav>
 
       <Topics topic={topic} />
