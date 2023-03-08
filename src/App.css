@@ -48,8 +48,28 @@
     color: black;
   }
 
+  .article_list_info {
+    color: rgb(110, 110, 110);
+  }
+
+  #article_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 0.6rem;
+  }
+
   #article_topic {
     margin-top: 10px;
+    padding-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  #article_comments {
+    padding-top: 5px;
+    font-size: 0.5rem;
+  }
+
+  #article_votes {
     padding-top: 5px;
     font-size: 0.5rem;
   }
@@ -173,78 +193,120 @@
     font-size: 0.5rem;
   }
 
-    /* new comment:*/
+  /* new comment:*/
 
-    .new_comment {
-      background-color: rgba(215, 215, 215, 0.459);
-      width: 95%;
-      height: 25vh;
-      margin: 5px 15px 10px 10px;
-      float: right;
-      position: relative;
-      top: 3px;
-      left: 7px;
-      border-radius: 4px;
-    }
-  
-    .username_select {
-      background-color: rgb(178, 188, 196);
-      width: 16vh;
-      height: 5vh;
-      margin: 10px 15px;
-      position: relative;
-      top: 20px;
-      right: 40px;
-      float: left;
-      border: none;
-      border-radius: 4px;
-      font-size: 0.4rem;
-      text-align: center;
-    }
-  
-    .label_username {
-      color: rgb(79, 77, 77);
-      height: 5px;
-      position: relative;
-      top: 15px;
-      left: 25px;
-      font-size: 0.5rem;
-      float: left;
-    }
-  
-    .label_addComment {
-      display: none;
-    }
-  
-    #new_comment_text {
-      background-color: rgb(255, 255, 255);
-      width: 65vw;
-      height: 19vh;
-      border-radius: 4px;
-      border: none;
-      position: relative;
-      bottom: 35px;
-      font-size: 0.5rem;
-      margin: 10px;
-      float: right;
-    }
-  
-    #new_Comment_btn {
-      background-color: rgb(178, 188, 196);
-      width: 17vw;
-      height: 6vh;
-      border: none;
-      position: relative;
-      top: -80px;
-      right: 3px;
-      text-align: center;
-      color: rgb(52, 49, 49);
-      border-radius: 4px;
-      font-size: 0.5rem;
-      float: left;
-      margin: 10px 15px;
-      padding: 2px;
-    }
+  .new_comment {
+    background-color: rgba(215, 215, 215, 0.459);
+    width: 95%;
+    height: 25vh;
+    margin: 5px 15px 10px 10px;
+    float: right;
+    position: relative;
+    top: 3px;
+    left: 7px;
+    border-radius: 4px;
+  }
+
+  .username_select {
+    background-color: rgb(178, 188, 196);
+    width: 16vh;
+    height: 5vh;
+    margin: 10px 15px;
+    position: relative;
+    top: 20px;
+    right: 40px;
+    float: left;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.4rem;
+    text-align: center;
+  }
+
+  .label_username {
+    color: rgb(79, 77, 77);
+    height: 5px;
+    position: relative;
+    top: 15px;
+    left: 25px;
+    font-size: 0.5rem;
+    float: left;
+  }
+
+  .label_addComment {
+    display: none;
+  }
+
+  #new_comment_text {
+    background-color: rgb(255, 255, 255);
+    width: 65vw;
+    height: 19vh;
+    border-radius: 4px;
+    border: none;
+    position: relative;
+    bottom: 35px;
+    font-size: 0.5rem;
+    margin: 10px;
+    float: right;
+  }
+
+  #new_Comment_btn {
+    background-color: rgb(178, 188, 196);
+    width: 17vw;
+    height: 6vh;
+    border: none;
+    position: relative;
+    top: -80px;
+    right: 3px;
+    text-align: center;
+    color: rgb(52, 49, 49);
+    border-radius: 4px;
+    font-size: 0.5rem;
+    float: left;
+    margin: 10px 15px;
+    padding: 2px;
+  }
+
+  .sort_order {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .sort_title {
+    font-size: 0.6rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .sort_section {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .sort_select {
+    font-size: 0.7rem;
+    color: rgb(110, 110, 110);
+    width: 100px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
+
+  .order_title {
+    font-size: 0.6rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .order_section {
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .order_select {
+    font-size: 0.7rem;
+    color: rgb(110, 110, 110);
+    width: 100px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
 } /*END OF CELLPHONE CSS*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -292,9 +354,30 @@
     color: black;
   }
 
+  .article_list_info {
+    color: rgb(110, 110, 110);
+  }
+
+  #article_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 0.8rem;
+  }
+
   #article_topic {
     margin-top: 10px;
     padding-top: 5px;
+    font-size: 0.7rem;
+  }
+
+  #article_comments {
+    padding-top: 5px;
+    font-size: 0.7rem;
+  }
+
+  #article_votes {
+    padding-top: 5px;
+    font-size: 0.7rem;
   }
 
   .single_article {
@@ -489,6 +572,50 @@
     float: left;
     margin: 10px 15px;
   }
+
+  .sort_order {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .sort_title {
+    font-size: 0.7rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .sort_section {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .sort_select {
+    font-size: 0.7rem;
+    color: rgb(110, 110, 110);
+    width: 150px;
+    height: 25px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
+
+  .order_title {
+    font-size: 0.7rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .order_section {
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .order_select {
+    font-size: 0.7rem;
+    color: rgb(110, 110, 110);
+    width: 150px;
+    height: 25px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
 } /*END OF TABLET CSS*/
 
 @media only screen and (min-width: 992px) {
@@ -541,16 +668,42 @@
   #article_title {
     margin: 20px;
     padding: 5px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  #article_img {
+    width: 400px;
+    border-radius: 3px;
   }
 
   #article_title_link {
     color: black;
   }
 
+  .article_list_info {
+    color: rgb(110, 110, 110);
+  }
+
+  #article_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 1.2rem;
+  }
+
   #article_topic {
     margin-top: 10px;
     padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  #article_comments {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  #article_votes {
+    padding-top: 5px;
+    font-size: 1.1rem;
   }
 
   .single_article {
@@ -745,5 +898,81 @@
     text-align: center;
     color: rgb(52, 49, 49);
     border-radius: 4px;
+  }
+
+  .sort_order {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .sort_title {
+    font-size: 1.2rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .sort_section {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .sort_select {
+    font-size: 1.2rem;
+    color: rgb(110, 110, 110);
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
+
+  .order_title {
+    font-size: 1.2rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .order_section {
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .order_select {
+    font-size: 1.2rem;
+    color: rgb(110, 110, 110);
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
+
+  #articleByTopic_img {
+    width: 500px;
+    margin: 10px;
+    border-radius: 3px;
+  }
+
+  .articleByTopic_div {
+    color: rgb(110, 110, 110);
+  }
+
+  .articlebyTopic_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 1.2rem;
+  }
+  .articleByTopic_topic {
+    padding-top: 10px;
+    font-size: 1.1rem;
+  }
+  .articleByTopic_comments {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+  .articleByTopic_votes {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  .active {
+    color: #E5F5E0;
   }
 } /*END OF LAPTOP CSS*/
