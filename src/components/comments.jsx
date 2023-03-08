@@ -1,8 +1,20 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCommentsByArticleID } from "../utils/api";
+import { deleteComment } from "../utils/api";
 
-export const Comments = ({ comments, commentFormattedDates }) => {
+export const Comments = ({ comments, setComments, commentFormattedDates }) => {
+  // let id = 1301;
+  const handleDelete = (comment_id) => {
+    deleteComment(comment_id).then(() => {
+      setComments(
+        comments.filter((comment) => {
+          return comment.comment_id !== comment_id;
+        })
+      );
+    });
+  };
+
   return (
     <div>
       <section className="comments">
@@ -16,6 +28,9 @@ export const Comments = ({ comments, commentFormattedDates }) => {
                   <h6 id="comment_author">Posted by {comment.author}</h6>
                   <h6 id="comment_date"> on {commentFormattedDates[index]}</h6>
                   <h6 id="comment_votes">Votes: {comment.votes}</h6>
+                  <button onClick={() => handleDelete(comment.comment_id)}>
+                    Delete
+                  </button>
                 </div>
               </li>
             ))}

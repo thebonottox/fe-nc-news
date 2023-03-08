@@ -68,6 +68,7 @@ export const SingleArticle = () => {
       <Votes votes={article.votes} article_id={article_id} />
       <Comments
         comments={comments}
+        setComments={setComments}
         commentFormattedDates={commentFormattedDates}
       />
       <AddComment comments={comments} setComments={setComments} />
