@@ -52,6 +52,7 @@ const ArticlesList = ({ articles, sortBy, setSortBy, order, setOrder }) => {
                 </h3>
                 <img
                   src={article.article_img_url}
+                  alt=""
                   id="article_img"
                   width="250px"
                 />
