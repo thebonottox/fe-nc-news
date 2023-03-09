@@ -849,6 +849,7 @@
   }
 
   #single_art_img {
+    width: 320px;
     float: right;
     opacity: 0.7;
     margin: 10px 15px 15px 15px;
@@ -857,8 +858,7 @@
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    min-width: 60vw;
-    max-width: 60vw;
+    width: 60vw;
     height: 55vh;
     text-align: justify;
     margin: 10px;
@@ -1223,23 +1223,24 @@
   }
 
   #single_art_img {
-    width: 320px;
+    width: 400px;
     float: right;
     opacity: 0.7;
-    margin: 10px 15px 25px 15px;
+    margin: 10px 15px 15px 15px;
     border-radius: 4px;
+    position: relative;
+    right: 50px;
   }
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    min-width: 60vw;
-    max-width: 60vw;
+    width: 60vw;
     height: 55vh;
     text-align: justify;
     margin: 10px;
     padding: 5px 10px;
     line-height: 24pt;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     overflow: auto;
     word-wrap: break-word;
     border-radius: 4px;
@@ -1300,21 +1301,22 @@
 
   .vote_buttons {
     background-color: rgba(215, 215, 215, 0.459);
-    width: 320px;
+    width: 380px;
+    height: 100px;
     text-align: center;
     padding: 15px;
     float: right;
     margin: 0 0 20px 15px;
     position: relative;
     bottom: 130px;
-    right: 10px;
+    right: 80px;
     border-radius: 4px;
   }
 
   #vote_btn {
     background-color: rgb(178, 188, 196);
-    width: 50px;
-    height: 30px;
+    width: 70px;
+    height: 35px;
     margin: 5px;
     border: none;
     border-radius: 2px;
@@ -1324,6 +1326,7 @@
   #vote_box_title {
     padding-bottom: 5px;
     color: rgb(71, 70, 70);
+    font-size: 1.2rem;
   }
 
   .loading {
@@ -1336,12 +1339,13 @@
 
   .new_comment {
     background-color: rgba(215, 215, 215, 0.459);
-    width: 320px;
+    width: 30vw;
     height: 55vh;
-    margin: 30px 10px 20px 10px;
+    margin: 10px 10px 20px 10px;
     float: right;
     position: relative;
-    bottom: 374px;
+    bottom: 465px;
+    right: 50px;
     border-radius: 4px;
   }
 
@@ -1351,10 +1355,11 @@
     height: 5px;
     position: relative;
     top: 20px;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
   .username_select {
     background-color: rgb(178, 188, 196);
+    color: rgb(52, 49, 49);
     width: 180px;
     height: 30px;
     margin: 10px 80px 20px 30px;
@@ -1362,6 +1367,7 @@
     top: 20px;
     border: none;
     border-radius: 4px;
+    font-size: 1.1rem;
   }
 
   .label_addComment {
@@ -1370,7 +1376,7 @@
     height: 5px;
     position: relative;
     top: 20px;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
 
   #new_comment_text {
@@ -1383,19 +1389,21 @@
     position: relative;
     bottom: -20px;
     padding: 5px;
+    font-size: 1rem;
   }
 
   #new_Comment_btn {
     background-color: rgb(178, 188, 196);
     width: 15vw;
-    height: 5vh;
+    height: 8vh;
     border: none;
     position: relative;
-    bottom: -15px;
-    left: 80px;
+    bottom: -45px;
+    left: 100px;
     text-align: center;
     color: rgb(52, 49, 49);
     border-radius: 4px;
+    font-size: 1.2rem;
   }
 
   .sort_order {

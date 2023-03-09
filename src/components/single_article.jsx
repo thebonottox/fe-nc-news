@@ -57,7 +57,7 @@ export const SingleArticle = () => {
         src={article.article_img_url}
         alt=""
         id="single_art_img"
-        width="320px"
+        width="300px"
       />
 
       <p id="single_art_body">{article.body}</p>
