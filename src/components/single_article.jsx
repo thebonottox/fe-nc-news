@@ -54,8 +54,7 @@ export const SingleArticle = () => {
     <section className="single_article">
       <h2 id="single_art_title">{article.title}</h2>
       <img
-        src={article.article_img_url}
-        alt="article image"
+        src={article.article_img_url}        
         id="single_art_img"
         width="350px"
       />
