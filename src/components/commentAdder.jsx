@@ -46,7 +46,9 @@ export const AddComment = ({ comments, setComments }) => {
 );
 
   return (
-    <form className="new_comment" onSubmit={handleSubmit}>
+    <div className="new_comment">
+    <form  onSubmit={handleSubmit}>
+      <div className="comment_username">
       <label className="label_username" htmlFor="username">
         Username:
       </label>
@@ -60,6 +62,7 @@ export const AddComment = ({ comments, setComments }) => {
         <option value="cooljmessy">cooljmessy</option>
         <option value="weegembump">weegembump</option>
       </select>
+      </div>
 
       <label className="label_addComment" htmlFor="new-comment">
         Add Comment:
@@ -74,5 +77,6 @@ export const AddComment = ({ comments, setComments }) => {
       {isSubmitting ? "Adding..." : "Add Comment"}
       </button>
     </form>
+    </div>
   );
 };
