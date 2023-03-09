@@ -54,7 +54,7 @@ const ArticlesList = ({ articles, sortBy, setSortBy, order, setOrder }) => {
                   src={article.article_img_url}
                   alt=""
                   id="article_img"
-                  width="250px"
+                  width="200px"
                 />
                 <div className="article_list_info">
                   <p id="article_writtenBy">

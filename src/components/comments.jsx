@@ -1,4 +1,5 @@
 import { deleteComment } from "../utils/api";
+import { BsFillTrashFill } from "react-icons/bs";
 
 export const Comments = ({ comments, setComments, commentFormattedDates }) => {
   const handleDelete = (comment_id) => {
@@ -26,11 +27,14 @@ export const Comments = ({ comments, setComments, commentFormattedDates }) => {
                 <p>{comment.body}</p>
                 <div className="comment_info">
                   <h6 id="comment_author">Posted by {comment.author}</h6>
-                  <h6 id="comment_date"> on {commentFormattedDates[index]}</h6>
+                  <h6 id="comment_date">on {commentFormattedDates[index]}</h6>
                   <h6 id="comment_votes">Votes: {comment.votes}</h6>
-                  <button onClick={() => handleDelete(comment.comment_id)}>
-                    Delete
-                  </button>
+                  <div
+                    className="delete_icon"
+                    onClick={() => handleDelete(comment.comment_id)}
+                  >
+                    <BsFillTrashFill />
+                  </div>
                 </div>
               </li>
             ))}

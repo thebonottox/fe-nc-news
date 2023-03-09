@@ -34,7 +34,7 @@ export const Topics = ({ topic }) => {
                   src={article.article_img_url}
                   alt=""
                   id="articleByTopic_img"
-                  width="250px"
+                  width="200px"
                 />
                 <div className="articleByTopic_div">
                   <p className="articlebyTopic_writtenBy">

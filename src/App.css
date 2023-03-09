@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   .header_title {
     text-align: center;
     margin: 10px 0;
@@ -46,6 +46,10 @@
 
   #article_title_link {
     color: black;
+  }
+
+  #article_img {
+    border-radius: 2px;
   }
 
   .article_list_info {
@@ -131,7 +135,7 @@
     font-size: 0.5rem;
     width: 90vw;
     max-height: 60vh;
-    margin: 15px 20px 0 10px;
+    margin: 15px 20px 10px 10px;
     padding: 10px;
     border-radius: 4px;
     overflow: auto;
@@ -143,9 +147,12 @@
     text-align: justify;
   }
 
-  .comment_info h6 {
-    display: inline-block;
+  .comment_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 2px;
+    font-size: 0.6rem;
   }
 
   #comment_section_title {
@@ -155,6 +162,20 @@
 
   #comment_date {
     display: inline-block;
+    margin-left: 2px;
+  }
+
+  #comment_votes {
+    margin-left: 2px;
+  }
+
+  .delete_icon {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+    color: rgb(52, 49, 49);
   }
 
   ul {
@@ -209,16 +230,17 @@
 
   .username_select {
     background-color: rgb(178, 188, 196);
-    width: 16vh;
+    color: rgb(52, 49, 49);
+    width: 17vh;
     height: 5vh;
     margin: 10px 15px;
     position: relative;
     top: 20px;
-    right: 40px;
+    right: 42px;
     float: left;
     border: none;
     border-radius: 4px;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     text-align: center;
   }
 
@@ -238,7 +260,7 @@
 
   #new_comment_text {
     background-color: rgb(255, 255, 255);
-    width: 65vw;
+    width: 60vw;
     height: 19vh;
     border-radius: 4px;
     border: none;
@@ -247,12 +269,13 @@
     font-size: 0.5rem;
     margin: 10px;
     float: right;
+    padding: 3px;
   }
 
   #new_Comment_btn {
     background-color: rgb(178, 188, 196);
-    width: 17vw;
-    height: 6vh;
+    width: 19vw;
+    height: 5vh;
     border: none;
     position: relative;
     top: -80px;
@@ -307,13 +330,44 @@
     border: 1px solid rgb(52, 49, 49);
     border-radius: 3px;
   }
+
+  #articleByTopic_img {
+    margin: 10px;
+    border-radius: 2px;
+  }
+
+  .articleByTopic_div {
+    color: rgb(110, 110, 110);
+  }
+
+  .articlebyTopic_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 0.7rem;
+  }
+  .articleByTopic_topic {
+    padding-top: 10px;
+    font-size: 0.6rem;
+  }
+  .articleByTopic_comments {
+    padding-top: 5px;
+    font-size: 0.6rem;
+  }
+  .articleByTopic_votes {
+    padding-top: 5px;
+    font-size: 0.6rem;
+  }
+
+  .active {
+    color: #e5f5e0;
+  }
 } /*END OF CELLPHONE CSS*/
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .header_title {
     text-align: center;
     margin: 10px 0;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(215, 215, 215, 0.459);
   }
 
@@ -322,36 +376,43 @@
     border: none;
     background-color: rgba(0, 0, 0, 0.765);
     color: rgb(255, 255, 255);
-    padding: 15px;
+    padding: 09px;
+    font-size: 1.2rem;
   }
 
   .nav_link {
     color: rgb(229, 230, 231);
-    font-size: 1.5rem;
     padding: 5px;
-    margin: 0 10px;
+    margin: 0 7px;
   }
 
   #articles_list_title {
     text-align: center;
-    margin: 20px;
+    margin: 5px;
     padding: 5px;
+    font-size: 1.4rem;
   }
 
   #article {
     text-align: center;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.462);
-    margin: 20px 0;
+    border-top: 0.5px solid rgba(84, 83, 83, 0.462);
+    margin: 15px 0;
     padding: 5px;
   }
 
   #article_title {
     margin: 20px;
     padding: 5px;
+    font-size: 1.4rem;
   }
 
   #article_title_link {
     color: black;
+  }
+
+  #article_img {
+    border-radius: 2px;
+    width: 300px;
   }
 
   .article_list_info {
@@ -361,38 +422,39 @@
   #article_writtenBy {
     margin-top: 10px;
     padding-top: 5px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   #article_topic {
     margin-top: 10px;
     padding-top: 5px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   #article_comments {
     padding-top: 5px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   #article_votes {
     padding-top: 5px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .single_article {
+    display: grid;
+    align-items: center;
     padding: 10px;
     width: 100%;
     height: 100vh;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(255, 255, 255);
     overflow: auto;
-    position: relative;
   }
 
   #single_art_title {
-    margin: 15px;
+    margin: 10px;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     max-width: 90vw;
     text-align: center;
   }
@@ -400,7 +462,10 @@
   .date_and_author p {
     display: inline-block;
     font-size: 0.6rem;
+    margin: 0 0 10px 0;
     font-style: italic;
+    position: relative;
+    left: 10px;
   }
 
   #created_at {
@@ -418,14 +483,14 @@
 
   #single_art_body {
     background-color: rgba(215, 215, 215, 0.459);
-    width: 93.5vw;
+    width: 90vw;
     min-height: 35vh;
-    max-height: 60vh;
+    max-height: 80vh;
     text-align: justify;
-    margin: 15px 15px 0 15px;
-    padding: 10px;
-    line-height: 18pt;
-    font-size: 0.8rem;
+    margin: 15px 15px 0 25px;
+    padding: 10px 10px 0 10px;
+    line-height: 12pt;
+    font-size: 0.6rem;
     overflow: auto;
     word-wrap: break-word;
     border-radius: 4px;
@@ -434,10 +499,10 @@
   .comments {
     background-color: rgba(215, 215, 215, 0.459);
     text-align: center;
-    font-size: 0.7rem;
-    width: 93.5vw;
-    height: 45vh;
-    margin: 15px 15px 5px 15px;
+    font-size: 0.6rem;
+    width: 90vw;
+    max-height: 60vh;
+    margin: 0 15px 25px 25px;
     padding: 10px;
     border-radius: 4px;
     overflow: auto;
@@ -449,10 +514,12 @@
     text-align: justify;
   }
 
-  .comment_info h6 {
-    display: inline-block;
-    padding: 3px;
-    font-size: 0.5rem;
+  .comment_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+    font-size: 0.7rem;
   }
 
   #comment_section_title {
@@ -462,6 +529,20 @@
 
   #comment_date {
     display: inline-block;
+    margin-left: 2px;
+  }
+
+  #comment_votes {
+    margin-left: 2px;
+  }
+
+  .delete_icon {
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+    padding: 3px;
+    margin-left: 5px;
+    color: rgb(52, 49, 49);
   }
 
   ul {
@@ -469,19 +550,24 @@
   }
 
   .vote_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
     background-color: rgba(215, 215, 215, 0.459);
-    width: 320px;
+    width: 90vw;
+    height: 10vh;
     text-align: center;
     padding: 2px;
     border-radius: 4px;
-    margin: 0 15px 20px 0;
-    float: right;
+    margin: 5px 15px 25px 25px;
+    align-items: center;
   }
 
   #vote_btn {
     background-color: rgb(178, 188, 196);
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 25px;
     margin: 5px;
     border: none;
     border-radius: 2px;
@@ -504,23 +590,24 @@
 
   .new_comment {
     background-color: rgba(215, 215, 215, 0.459);
-    width: 96%;
+    width: 90vw;
     height: 25vh;
-    margin: 5px 15px 10px 10px;
-    float: right;
-    position: relative;
+    margin: 0 15px 10px 25px;
     border-radius: 4px;
+  }
+
+  .comment_username {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
   }
 
   .username_select {
     background-color: rgb(178, 188, 196);
-    width: 18.5vh;
-    height: 5vh;
-    margin: 10px 15px;
-    position: relative;
-    top: 20px;
-    right: 40px;
-    float: left;
+    color: rgb(52, 49, 49);
+    width: 18vh;
+    height: 6vh;
+    margin: 5px 15px;
     border: none;
     border-radius: 4px;
     font-size: 0.6rem;
@@ -529,48 +616,39 @@
 
   .label_username {
     color: rgb(79, 77, 77);
-    height: 5px;
-    position: relative;
-    top: 15px;
-    left: 45px;
     font-size: 0.6rem;
-    float: left;
+    margin: 10px 0 0 15px;
   }
 
   .label_addComment {
-    color: rgb(79, 77, 77);
-    font-size: 0.55rem;
-    position: relative;
-    left: 240px;
+    display: none;
   }
 
   #new_comment_text {
     background-color: rgb(255, 255, 255);
-    width: 75vw;
-    height: 19vh;
+    width: 65vw;
+    height: 20vh;
     border-radius: 4px;
     border: none;
-    position: relative;
-    bottom: 35px;
     font-size: 0.6rem;
     margin: 10px;
     float: right;
+    position: relative;
+    bottom: 55px;
+    padding: 5px;
   }
 
   #new_Comment_btn {
     background-color: rgb(178, 188, 196);
-    width: 12vw;
-    height: 5vh;
+    width: 17vw;
+    height: 6vh;
     border: none;
-    position: relative;
-    top: -95px;
-    left: 6px;
     text-align: center;
     color: rgb(52, 49, 49);
     border-radius: 4px;
     font-size: 0.6rem;
-    float: left;
     margin: 10px 15px;
+    padding: 2px;
   }
 
   .sort_order {
@@ -580,7 +658,7 @@
   }
 
   .sort_title {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: rgb(52, 49, 49);
   }
 
@@ -592,14 +670,13 @@
   .sort_select {
     font-size: 0.7rem;
     color: rgb(110, 110, 110);
-    width: 150px;
-    height: 25px;
+    width: 100px;
     border: 1px solid rgb(52, 49, 49);
     border-radius: 3px;
   }
 
   .order_title {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: rgb(52, 49, 49);
   }
 
@@ -611,14 +688,46 @@
   .order_select {
     font-size: 0.7rem;
     color: rgb(110, 110, 110);
-    width: 150px;
-    height: 25px;
+    width: 100px;
     border: 1px solid rgb(52, 49, 49);
     border-radius: 3px;
   }
-} /*END OF TABLET CSS*/
 
-@media only screen and (min-width: 992px) {
+  #articleByTopic_img {
+    margin: 10px;
+    border-radius: 2px;
+    width: 300px;
+  }
+
+  .articleByTopic_div {
+    color: rgb(110, 110, 110);
+  }
+
+  .articlebyTopic_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 0.7rem;
+  }
+  .articleByTopic_topic {
+    padding-top: 10px;
+    font-size: 0.6rem;
+  }
+  .articleByTopic_comments {
+    padding-top: 5px;
+    font-size: 0.6rem;
+  }
+  .articleByTopic_votes {
+    padding-top: 5px;
+    font-size: 0.6rem;
+  }
+
+  .active {
+    color: #e5f5e0;
+  }
+}
+/*END OF TABLET CSS*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .header_title {
     text-align: center;
     margin: 10px 0;
@@ -668,7 +777,7 @@
   #article_title {
     margin: 20px;
     padding: 5px;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   #article_img {
@@ -708,11 +817,8 @@
 
   .single_article {
     margin: 5px 0;
-    padding: 20px;
-    width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
-    position: relative;
+    padding: 20px;
   }
 
   #single_art_title {
@@ -720,6 +826,11 @@
     font-size: 2.2rem;
     max-width: 65vw;
     text-align: left;
+    margin-left: 5px;
+  }
+
+  html {
+    height: 100%;
   }
 
   .date_and_author p {
@@ -750,13 +861,12 @@
     background-color: rgba(215, 215, 215, 0.459);
     min-width: 60vw;
     max-width: 60vw;
-    min-height: 45vh;
-    max-height: 45vh;
+    height: 55vh;
     text-align: justify;
     margin: 10px;
     padding: 5px 10px;
     line-height: 24pt;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     overflow: auto;
     word-wrap: break-word;
     border-radius: 4px;
@@ -767,13 +877,11 @@
     text-align: center;
     font-size: 0.9rem;
     width: 60vw;
-    height: 50vh;
+    height: 55vh;
     margin: 25px 15px 5px 10px;
     padding: 10px;
     border-radius: 4px;
     overflow: auto;
-    position: relative;
-    top: 10px;
   }
 
   #comment {
@@ -782,10 +890,12 @@
     text-align: justify;
   }
 
-  .comment_info h6 {
-    display: inline-block;
+  .comment_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 3px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
   #comment_section_title {
@@ -795,6 +905,20 @@
 
   #comment_date {
     display: inline-block;
+    margin-left: 2px;
+  }
+
+  #comment_votes {
+    margin-left: 2px;
+  }
+
+  .delete_icon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    padding: 3px;
+    margin-left: 10px;
+    color: rgb(52, 49, 49);
   }
 
   ul {
@@ -840,11 +964,11 @@
   .new_comment {
     background-color: rgba(215, 215, 215, 0.459);
     width: 320px;
-    height: 50vh;
-    margin: 0 10px 30px 10px;
+    height: 55vh;
+    margin: 0 10px 20px 10px;
     float: right;
     position: relative;
-    top: -365px;
+    top: -322px;
     border-radius: 4px;
   }
 
@@ -885,6 +1009,7 @@
     border: none;
     position: relative;
     bottom: -20px;
+    padding: 5px;
   }
 
   #new_Comment_btn {
@@ -945,7 +1070,7 @@
   }
 
   #articleByTopic_img {
-    width: 500px;
+    width: 400px;
     margin: 10px;
     border-radius: 3px;
   }
@@ -973,6 +1098,380 @@
   }
 
   .active {
-    color: #E5F5E0;
+    color: #e5f5e0;
   }
 } /*END OF LAPTOP CSS*/
+
+@media only screen and (min-width: 1024px) {
+  .header_title {
+    text-align: center;
+    margin: 10px 0;
+    padding: 25px;
+    background-color: rgba(215, 215, 215, 0.459);
+    font-size: 3.5rem;
+  }
+
+  .nav_bar {
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.765);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+
+  .nav_link {
+    color: rgb(229, 230, 231);
+    font-size: 2.3rem;
+    padding: 5px;
+    margin: 0 15px;
+  }
+
+  .articles_list {
+    display: grid;
+    width: 100%;
+    align-items: center;
+  }
+
+  #articles_list_title {
+    text-align: center;
+    margin-top: 30px;
+    padding: 5px;
+    height: 60px;
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  #article {
+    text-align: center;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.462);
+    margin: 20px 0;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #article_title {
+    margin: 20px;
+    padding: 5px;
+    font-size: 2.8rem;
+  }
+
+  #article_img {
+    width: 450px;
+    border-radius: 3px;
+  }
+
+  #article_title_link {
+    color: black;
+  }
+
+  .article_list_info {
+    color: rgb(110, 110, 110);
+  }
+
+  #article_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 1.2rem;
+  }
+
+  #article_topic {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  #article_comments {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  #article_votes {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  .single_article {
+    margin: 5px 0;
+    height: 100%;
+    padding: 20px;
+  }
+
+  #single_art_title {
+    padding: 10px 5px;
+    font-size: 2.8rem;
+    max-width: 65vw;
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  .date_and_author p {
+    display: inline-block;
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+
+  #created_at {
+    margin-left: 1rem;
+  }
+
+  #single_art_author {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+
+  #single_art_img {
+    width: 320px;   
+    float: right;
+    opacity: 0.7;
+    margin: 10px 15px 25px 15px;
+    border-radius: 4px;
+  }
+
+  #single_art_body {
+    background-color: rgba(215, 215, 215, 0.459);
+    min-width: 60vw;
+    max-width: 60vw;
+    height: 55vh;
+    text-align: justify;
+    margin: 10px;
+    padding: 5px 10px;
+    line-height: 24pt;
+    font-size: 1.1rem;
+    overflow: auto;
+    word-wrap: break-word;
+    border-radius: 4px;
+  }
+
+  .comments {
+    background-color: rgba(215, 215, 215, 0.459);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 60vw;
+    height: 55vh;
+    margin: 25px 15px 5px 10px;
+    padding: 10px;
+    border-radius: 4px;
+    overflow: auto;
+  }
+
+  #comment {
+    padding: 5px;
+    border-top: 1px solid rgba(215, 215, 215, 0.961);
+    text-align: justify;
+  }
+
+  .comment_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px;
+    font-size: 1.1rem;
+  }
+
+  #comment_section_title {
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  #comment_date {
+    display: inline-block;
+    margin-left: 2px;
+  }
+
+  #comment_votes {
+    margin-left: 2px;
+  }
+
+  .delete_icon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    padding: 3px;
+    margin-left: 10px;
+    color: rgb(52, 49, 49);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .vote_buttons {
+    background-color: rgba(215, 215, 215, 0.459);
+    width: 320px;
+    text-align: center;
+    padding: 15px;
+    float: right;
+    margin: 0 0 10px 15px;
+    position: relative;
+    bottom: 130px;
+    right: 10px;
+    border-radius: 4px;
+  }
+
+  #vote_btn {
+    background-color: rgb(178, 188, 196);
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+    color: rgb(37, 36, 36);
+  }
+
+  #vote_box_title {
+    padding-bottom: 5px;
+    color: rgb(71, 70, 70);
+  }
+
+  .loading {
+    font-size: 2rem;
+    margin: 100px;
+    text-align: center;
+    color: rgb(4, 4, 4);
+  }
+  /* new comment:*/
+
+  .new_comment {
+    background-color: rgba(215, 215, 215, 0.459);
+    width: 320px;
+    height: 55vh;
+    margin: 0 10px 20px 10px;
+    float: right;
+    position: relative;
+    top: -410px;
+    border-radius: 4px;
+  }
+
+  .label_username {
+    color: rgb(52, 49, 49);
+    margin: 20px 10px 0 30px;
+    height: 5px;
+    position: relative;
+    top: 20px;
+    font-size: 0.85rem;
+  }
+  .username_select {
+    background-color: rgb(178, 188, 196);
+    width: 180px;
+    height: 30px;
+    margin: 10px 80px 20px 30px;
+    position: relative;
+    top: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .label_addComment {
+    color: rgb(52, 49, 49);
+    margin: 20px 10px 0 30px;
+    height: 5px;
+    position: relative;
+    top: 20px;
+    font-size: 0.85rem;
+  }
+
+  #new_comment_text {
+    background-color: rgb(255, 255, 255);
+    margin: 10px 32px;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 4px;
+    border: none;
+    position: relative;
+    bottom: -20px;
+    padding: 5px;
+  }
+
+  #new_Comment_btn {
+    background-color: rgb(178, 188, 196);
+    width: 15vw;
+    height: 5vh;
+    border: none;
+    position: relative;
+    bottom: -15px;
+    left: 80px;
+    text-align: center;
+    color: rgb(52, 49, 49);
+    border-radius: 4px;
+  }
+
+  .sort_order {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .sort_title {
+    font-size: 1.2rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .sort_section {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .sort_select {
+    font-size: 1.2rem;
+    color: rgb(110, 110, 110);
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
+
+  .order_title {
+    font-size: 1.2rem;
+    color: rgb(52, 49, 49);
+  }
+
+  .order_section {
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .order_select {
+    font-size: 1.2rem;
+    color: rgb(110, 110, 110);
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(52, 49, 49);
+    border-radius: 3px;
+  }
+
+  #articleByTopic_img {
+    width: 450px;
+    margin: 10px;
+    border-radius: 3px;
+  }
+
+  .articleByTopic_div {
+    color: rgb(110, 110, 110);
+  }
+
+  .articlebyTopic_writtenBy {
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 1.2rem;
+  }
+  .articleByTopic_topic {
+    padding-top: 10px;
+    font-size: 1.1rem;
+  }
+  .articleByTopic_comments {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+  .articleByTopic_votes {
+    padding-top: 5px;
+    font-size: 1.1rem;
+  }
+
+  .active {
+    color: #e5f5e0;
+  }
+}
