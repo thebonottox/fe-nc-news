@@ -363,7 +363,7 @@
   }
 } /*END OF CELLPHONE CSS*/
 
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
   .header_title {
     text-align: center;
     margin: 10px 0;
@@ -727,7 +727,7 @@
 }
 /*END OF TABLET CSS*/
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .header_title {
     text-align: center;
     margin: 10px 0;
@@ -849,11 +849,9 @@
   }
 
   #single_art_img {
-    max-width: 31vw;
-    max-height: 30vh;
     float: right;
     opacity: 0.7;
-    margin: 10px 15px 25px 15px;
+    margin: 10px 15px 15px 15px;
     border-radius: 4px;
   }
 
@@ -931,9 +929,9 @@
     text-align: center;
     padding: 15px;
     float: right;
-    margin: 0 0 30px 15px;
+    margin: 10px 0 30px 15px;
     position: relative;
-    bottom: 120px;
+    bottom: 130px;
     right: 10px;
     border-radius: 4px;
   }
@@ -965,10 +963,10 @@
     background-color: rgba(215, 215, 215, 0.459);
     width: 320px;
     height: 55vh;
-    margin: 0 10px 20px 10px;
+    margin: 20px 10px 20px 10px;
     float: right;
     position: relative;
-    top: -322px;
+    top: -430px;
     border-radius: 4px;
   }
 
@@ -1023,6 +1021,7 @@
     text-align: center;
     color: rgb(52, 49, 49);
     border-radius: 4px;
+    margin-top: 15px;
   }
 
   .sort_order {
@@ -1102,7 +1101,7 @@
   }
 } /*END OF LAPTOP CSS*/
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .header_title {
     text-align: center;
     margin: 10px 0;
@@ -1224,7 +1223,7 @@
   }
 
   #single_art_img {
-    width: 320px;   
+    width: 320px;
     float: right;
     opacity: 0.7;
     margin: 10px 15px 25px 15px;
@@ -1305,7 +1304,7 @@
     text-align: center;
     padding: 15px;
     float: right;
-    margin: 0 0 10px 15px;
+    margin: 0 0 20px 15px;
     position: relative;
     bottom: 130px;
     right: 10px;
@@ -1339,10 +1338,10 @@
     background-color: rgba(215, 215, 215, 0.459);
     width: 320px;
     height: 55vh;
-    margin: 0 10px 20px 10px;
+    margin: 30px 10px 20px 10px;
     float: right;
     position: relative;
-    top: -410px;
+    bottom: 374px;
     border-radius: 4px;
   }
 
