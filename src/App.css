@@ -516,7 +516,6 @@ ul {
 
   .date_and_author {
     display: flex;
-    align-items: start;
     font-style: italic;
     font-size: 0.8rem;
     color: rgb(94, 93, 93);
