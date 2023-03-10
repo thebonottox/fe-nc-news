@@ -17,7 +17,7 @@ export const Comments = ({ comments, setComments, commentFormattedDates }) => {
   };
 
   return (
-    <div>
+    
       <section className="comments">
         <h3 id="comment_section_title">{comments.length} comments:</h3>
         {comments && commentFormattedDates ? (
@@ -43,6 +43,6 @@ export const Comments = ({ comments, setComments, commentFormattedDates }) => {
           <p>No comments found</p>
         )}
       </section>
-    </div>
+   
   );
 };

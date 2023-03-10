@@ -53,25 +53,29 @@ export const SingleArticle = () => {
   return (
     <section className="single_article">
       <h2 id="single_art_title">{article.title}</h2>
-      <img
-        src={article.article_img_url}
-        alt=""
-        id="single_art_img"
-        width="300px"
-      />
+      <div className="text_and_img">
+        <img
+          src={article.article_img_url}
+          alt=""
+          id="single_art_img"
+          width="300px"
+        />
 
-      <p id="single_art_body">{article.body}</p>
+        <p id="single_art_body">{article.body}</p>
+      </div>
       <div className="date_and_author">
         <p id="created_at">Published on {formattedDate}</p>
         <p id="single_art_author">by {article.author}</p>
       </div>
       <Votes votes={article.votes} article_id={article_id} />
+      <section className="comments_section">
       <Comments
         comments={comments}
         setComments={setComments}
         commentFormattedDates={commentFormattedDates}
       />
       <AddComment comments={comments} setComments={setComments} />
+      </section>
     </section>
   );
 };
